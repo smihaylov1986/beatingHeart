@@ -1,3 +1,45 @@
+.container {
+width : 0px;
+}
+.btn-img{
+  position : absolute;
+  left : 20px;
+  top : 0px;
+  width:50px;
+  height:80px;
+
+}
+.btn-text {
+  position : absolute;
+  margin : 0px;
+  padding : 0px;
+  left : 90px;
+  top : 25px;
+}
+.button {
+  position : relative;
+  left : 700px;
+  top : -150px;
+  border : 1px solid red;
+  border-radius : 10px;
+  width : 200px;
+  height : 80px;
+  color : red;
+  font-size : 25px;
+}
+.button:hover {
+  background : red;
+  color : white;
+  cursor : pointer;
+}
+
+.button:hover .btn-img #heart2 {
+  fill : white;
+  filter : url(#beatingHeartFilter);
+  transform-origin : 50% 50%;
+  transform : rotate(360deg) scale(1.2);
+  transition : transform 0.5s ;
+}
 svg {
   height : 200px;
 }
@@ -8,11 +50,30 @@ svg {
     cursor : pointer;
   transform-origin : 50% 50%;
     filter:url(#beatingHeartFilter);
+  
 }
-#heart1:hover {
+#cBtn:hover #heart1 {
   cursor : pointer;
   transform-origin : 50% 50%;
     filter:url(#distortionFilter);
+    fill : white;
+}
+#cBtn:hover circle{
+  cursor : pointer;
+  stroke-width : 2.5px;
+  fill : red;
+  filter:url(#shadowFilter);
+  
+}
+#cBtn1:hover #heart {
+  cursor : pointer;
+  transform-origin : 50% 50%;
+    filter:url(#beatingHeartFilter);
+}
+#cBtn1:hover circle{
+  cursor : pointer;
+  stroke-width : 2.5px;
+  filter:url(#shadowFilter);
 }
 #heart2 {
   filter : url(#shadowFilter);
