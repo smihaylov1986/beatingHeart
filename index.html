@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
 	<body>
-<svg viewBox="0 0 100 100">
+<svg class='container' viewBox="0 0 100 100">
   <defs>
      <filter id="beatingHeartFilter" width="150%" height="150%">
      <feOffset result="offOut1" in="SourceAlpha" dx="3" dy="6" />
@@ -23,9 +23,9 @@
       </feMerge>
     </filter>
      <filter id="distortionFilter" width="150%" height="150%">
-     <feOffset result="offOut1" in="SourceAlpha" dx="3" dy="6" />
+<!--      <feOffset result="offOut1" in="SourceAlpha" dx="3" dy="6" />
         <feGaussianBlur result="blurOut1" in="offOut1" stdDeviation="4"/>
-       <feBlend in='SourceGraphic' in2='blurOut1'  mode="normal" /> 
+       <feBlend in='SourceGraphic' in2='blurOut1'  mode="normal" />  -->
        
 	<feTurbulence type="fractalNoise" baseFrequency="0.333 0.123" numOctaves="3" seed="522" stitchTiles="noStitch" x="0%" y="0%" width="150%" height="150%" result="turbulence"/>
       <feColorMatrix in="turbulence" type="hueRotate" values="0" result="cloud">
@@ -34,7 +34,7 @@
   </feColorMatrix>
 	<feDisplacementMap in="SourceGraphic" in2="cloud" scale="15" xChannelSelector="R" yChannelSelector="R" x="0%" y="0%" width="100%" height="100%" result="displacementMap"/>
      <feMerge> 
-     <feMergeNode in="blurOut1"/> =
+<!--      <feMergeNode in="blurOut1"/>  -->
         <feMergeNode in="displacementMap"/>
       </feMerge>
     </filter>
@@ -60,20 +60,35 @@
        <feBlend in='SourceGraphic' in2='blurOut1'  mode="normal" /> 
     </filter>
   </defs>
-    
-        <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 "
- fill='rgba(255,10,10,0.8)' />              
-        
-    
     </svg>
-<svg viewBox="0 0 100 100"> 
+<svg viewBox="-25 -25 150 150">
+   <g id='cBtn1'>
+   <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 "
+ fill='rgba(255,10,10,0.8)' />  
+      <circle cx='50' cy='45' r='60' stroke='red'
+          fill='transparent'></circle>
+  </g>
+</svg>
+<svg viewBox="-25 -25 150 150"> 
+  <g id='cBtn'>
+  <circle cx='50' cy='45' r='60' stroke='red'
+          fill='transparent'></circle>
  <path id="heart1" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 "
- fill='rgba(255,10,10,0.8)' />     
+ fill='rgba(255,10,10,0.8)' />   
+</g>
 </svg>
 
 <svg viewBox="0 0 100 100"> 
  <path id="heart2" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 "
  fill='rgba(255,10,10,0.8)' />     
 </svg>
+<div class='button'> 
+  <svg class='btn-img' viewBox="0 0 100 100"> 
+ <path id="heart2" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 "
+ fill='rgba(255,10,10,0.8)' />     
+</svg>
+  <p class='btn-text'>Like</p>
+   </div>
+
 	</body>
 </html>
